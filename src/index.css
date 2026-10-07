@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 215 28% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 243 75% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 28% 17%;
+    --muted: 215 16% 47%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 243 75% 52%;
+    --radius: 0.75rem;
+
+    --sidebar-bg: 243 47% 12%;
+    --sidebar-fg: 0 0% 100%;
+    --sidebar-active: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  *::-webkit-scrollbar { display: none; }
+  * { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .card-shadow {
+    box-shadow: 0 4px 24px -4px rgba(99, 102, 241, 0.08);
+  }
+  .card-shadow-accent {
+    box-shadow: 0 4px 24px -4px rgba(249, 115, 22, 0.1);
+  }
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary to-indigo-700;
+  }
+  .gradient-hero {
+    @apply bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-800;
+  }
+  .glassmorphism {
+    @apply bg-white/80 backdrop-blur-xl border border-white/40;
+  }
+}
+
+@keyframes spine-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-spine-pulse { animation: spine-pulse 2s ease-in-out infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }

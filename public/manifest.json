@@ -1,0 +1,10 @@
+{
+  "name": "RehabFlow",
+  "short_name": "RehabFlow",
+  "description": "Progress in Motion. Care at Home.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4338CA",
+  "background_color": "#FAFAFA",
+  "icons": []
+}
